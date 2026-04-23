@@ -1,0 +1,1632 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destrave Sua Corrida | Do Zero aos 5km em 8 Semanas</title>
+    <meta name="description" content="Ebook com 8 semanas de treino estruturado criado por personal trainer e maratonista. Do zero aos 5km com segurança e sem lesão. Por R$39,90." />
+    <meta property="og:title" content="Destrave Sua Corrida — Do Zero aos 5km em 8 Semanas" />
+    <meta property="og:description" content="O problema não foi o seu corpo. Foi a falta de método. E isso tem solução em 8 semanas." />
+    <meta property="og:type" content="website" />
+    <style>
+      /* ─── RESET & BASE ─── */
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+      :root {
+        --orange:   #F97316;
+        --orange-d: #EA6C0E;
+        --orange-l: #FED7AA;
+        --green:    #22C55E;
+        --dark:     #0A0A0A;
+        --dark-2:   #111111;
+        --dark-3:   #1A1A1A;
+        --dark-4:   #222222;
+        --gray:     #6B7280;
+        --gray-l:   #9CA3AF;
+        --white:    #FFFFFF;
+        --off-white:#F9FAFB;
+        --text:     #E5E7EB;
+        --border:   rgba(255,255,255,0.08);
+        --radius:   12px;
+        --radius-lg:20px;
+      }
+
+      html { scroll-behavior: smooth; }
+
+      body {
+        font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+        background: var(--dark);
+        color: var(--text);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      img { max-width: 100%; display: block; }
+      a { color: inherit; text-decoration: none; }
+
+      /* ─── LAYOUT ─── */
+      .container {
+        width: 100%;
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      section { padding: 72px 0; }
+
+      /* ─── TYPOGRAPHY ─── */
+      .label {
+        display: inline-block;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--orange);
+        margin-bottom: 16px;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 800;
+        line-height: 1.15;
+        color: var(--white);
+        letter-spacing: -0.02em;
+      }
+
+      h2 {
+        font-size: clamp(1.5rem, 4vw, 2.1rem);
+        font-weight: 800;
+        line-height: 1.2;
+        color: var(--white);
+        letter-spacing: -0.02em;
+        margin-bottom: 20px;
+      }
+
+      h3 {
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: var(--white);
+        margin-bottom: 8px;
+      }
+
+      p { color: var(--text); line-height: 1.75; }
+
+      .orange { color: var(--orange); }
+      .white  { color: var(--white); }
+
+      /* ─── DIVIDER ─── */
+      .divider {
+        width: 48px;
+        height: 3px;
+        background: var(--orange);
+        border-radius: 2px;
+        margin: 20px auto;
+      }
+      .divider.left { margin-left: 0; }
+
+      /* ─── HERO ─── */
+      #hero {
+        padding: 80px 0 64px;
+        background:
+          radial-gradient(ellipse 80% 60% at 50% -10%, rgba(249,115,22,0.18) 0%, transparent 65%),
+          var(--dark);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      #hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.018'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        pointer-events: none;
+      }
+
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(249,115,22,0.12);
+        border: 1px solid rgba(249,115,22,0.3);
+        border-radius: 100px;
+        padding: 6px 16px;
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--orange-l);
+        letter-spacing: 0.05em;
+        margin-bottom: 28px;
+      }
+
+      .hero-badge .dot {
+        width: 6px; height: 6px;
+        background: var(--orange);
+        border-radius: 50%;
+        animation: pulse 2s ease-in-out infinite;
+      }
+
+      @keyframes pulse {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50%       { opacity: 0.5; transform: scale(0.8); }
+      }
+
+      #hero h1 { margin-bottom: 24px; }
+
+      .subheadline {
+        font-size: clamp(1rem, 2.5vw, 1.2rem);
+        color: var(--gray-l);
+        max-width: 560px;
+        margin: 0 auto 40px;
+        line-height: 1.7;
+      }
+
+      .subheadline strong { color: var(--white); }
+
+      /* ─── CTA BUTTON ─── */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background: var(--orange);
+        color: var(--white);
+        font-size: 1rem;
+        font-weight: 800;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        padding: 18px 40px;
+        border-radius: var(--radius);
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        text-decoration: none;
+        width: 100%;
+        max-width: 440px;
+        box-shadow: 0 8px 32px rgba(249,115,22,0.35);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .btn::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, transparent 60%);
+        pointer-events: none;
+      }
+
+      .btn:hover {
+        background: var(--orange-d);
+        transform: translateY(-2px);
+        box-shadow: 0 12px 40px rgba(249,115,22,0.45);
+      }
+
+      .btn:active { transform: translateY(0); }
+
+      .btn-arrow { font-size: 1.2rem; }
+
+      .guarantee-note {
+        margin-top: 14px;
+        font-size: 12px;
+        color: var(--gray);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+      }
+
+      .guarantee-note svg { color: var(--green); }
+
+      /* ─── PRICE BADGE ─── */
+      .price-block {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        background: var(--dark-3);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 16px 32px;
+        margin-bottom: 28px;
+      }
+
+      .price-from {
+        font-size: 12px;
+        color: var(--gray);
+        text-decoration: line-through;
+        letter-spacing: 0.04em;
+      }
+
+      .price-main {
+        font-size: 2.4rem;
+        font-weight: 900;
+        color: var(--white);
+        line-height: 1;
+      }
+
+      .price-main span { font-size: 1.2rem; vertical-align: super; font-weight: 700; }
+
+      .price-note {
+        font-size: 11px;
+        color: var(--green);
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin-top: 4px;
+      }
+
+      /* ─── SOCIAL PROOF STRIP ─── */
+      .proof-strip {
+        display: flex;
+        justify-content: center;
+        gap: 32px;
+        padding: 24px 0;
+        flex-wrap: wrap;
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+        margin-top: 56px;
+      }
+
+      .proof-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+      }
+
+      .proof-number {
+        font-size: 1.6rem;
+        font-weight: 900;
+        color: var(--orange);
+        line-height: 1;
+      }
+
+      .proof-label {
+        font-size: 11px;
+        color: var(--gray-l);
+        letter-spacing: 0.04em;
+        text-align: center;
+      }
+
+      /* ─── IDENTIFICATION SECTION ─── */
+      #identification {
+        background: var(--dark-2);
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .checklist { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+
+      .checklist li {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        background: var(--dark-3);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 18px 20px;
+        transition: border-color 0.2s;
+      }
+
+      .checklist li:hover { border-color: rgba(249,115,22,0.3); }
+
+      .check-icon {
+        flex-shrink: 0;
+        width: 24px; height: 24px;
+        background: rgba(34,197,94,0.15);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1px;
+      }
+
+      .check-icon svg { color: var(--green); }
+
+      .checklist li p { font-size: 0.95rem; color: var(--text); line-height: 1.55; }
+
+      .highlight-box {
+        margin-top: 32px;
+        background: linear-gradient(135deg, rgba(249,115,22,0.1), rgba(249,115,22,0.05));
+        border: 1px solid rgba(249,115,22,0.3);
+        border-radius: var(--radius);
+        padding: 20px 24px;
+        text-align: center;
+        font-weight: 600;
+        color: var(--white);
+        font-size: 1rem;
+      }
+
+      /* ─── PROBLEM SECTION ─── */
+      #problem { background: var(--dark); }
+
+      .problem-card {
+        background: var(--dark-3);
+        border: 1px solid var(--border);
+        border-left: 3px solid var(--orange);
+        border-radius: var(--radius);
+        padding: 24px;
+        margin-bottom: 20px;
+      }
+
+      .problem-card p { font-size: 1rem; line-height: 1.75; }
+
+      .insight-box {
+        background: rgba(249,115,22,0.08);
+        border: 1px solid rgba(249,115,22,0.2);
+        border-radius: var(--radius);
+        padding: 24px;
+        text-align: center;
+        margin-top: 32px;
+      }
+
+      .insight-box p {
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: var(--white);
+        line-height: 1.6;
+      }
+
+      /* ─── SOLUTION SECTION ─── */
+      #solution {
+        background: var(--dark-2);
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .author-card {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        background: var(--dark-3);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 20px;
+        margin-top: 24px;
+      }
+
+      .author-avatar {
+        width: 56px; height: 56px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--orange), #C2410C);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: 900;
+        color: var(--white);
+        flex-shrink: 0;
+        letter-spacing: -0.05em;
+      }
+
+      .author-info h4 { font-size: 0.95rem; color: var(--white); margin-bottom: 2px; }
+      .author-info p  { font-size: 0.8rem; color: var(--gray-l); line-height: 1.4; }
+
+      /* ─── CONTENTS SECTION ─── */
+      #contents { background: var(--dark); }
+
+      .contents-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-top: 32px;
+      }
+
+      .content-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+        background: var(--dark-3);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 16px 18px;
+        transition: border-color 0.2s, transform 0.2s;
+      }
+
+      .content-item:hover {
+        border-color: rgba(249,115,22,0.25);
+        transform: translateX(4px);
+      }
+
+      .content-num {
+        flex-shrink: 0;
+        width: 28px; height: 28px;
+        background: rgba(249,115,22,0.15);
+        border: 1px solid rgba(249,115,22,0.3);
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.7rem;
+        font-weight: 800;
+        color: var(--orange);
+        margin-top: 1px;
+      }
+
+      .content-item p {
+        font-size: 0.92rem;
+        line-height: 1.5;
+        color: var(--text);
+      }
+
+      /* ─── PHASES SECTION ─── */
+      #phases {
+        background: var(--dark-2);
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .phases-track {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        margin-top: 40px;
+        position: relative;
+      }
+
+      .phases-track::before {
+        content: '';
+        position: absolute;
+        left: 27px;
+        top: 40px;
+        bottom: 40px;
+        width: 2px;
+        background: linear-gradient(to bottom, var(--orange), rgba(249,115,22,0.1));
+      }
+
+      .phase-card {
+        display: flex;
+        gap: 20px;
+        padding: 24px 0;
+        position: relative;
+      }
+
+      .phase-number {
+        flex-shrink: 0;
+        width: 56px; height: 56px;
+        border-radius: 50%;
+        background: var(--dark);
+        border: 2px solid var(--orange);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        font-weight: 900;
+        color: var(--orange);
+        z-index: 1;
+      }
+
+      .phase-content { flex: 1; padding-top: 8px; }
+
+      .phase-weeks {
+        display: inline-block;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--orange);
+        background: rgba(249,115,22,0.1);
+        border: 1px solid rgba(249,115,22,0.2);
+        border-radius: 100px;
+        padding: 3px 10px;
+        margin-bottom: 8px;
+      }
+
+      .phase-content h3 { margin-bottom: 8px; }
+      .phase-content p  { font-size: 0.92rem; color: var(--gray-l); line-height: 1.65; }
+
+      /* ─── AUTHOR SECTION ─── */
+      #author { background: var(--dark); }
+
+      .author-full {
+        background: var(--dark-3);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        padding: 36px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .author-header {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .author-avatar-lg {
+        width: 80px; height: 80px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--orange), #C2410C);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        font-weight: 900;
+        color: var(--white);
+        flex-shrink: 0;
+        letter-spacing: -0.05em;
+        border: 3px solid rgba(249,115,22,0.3);
+      }
+
+      .author-meta h3 { font-size: 1.3rem; margin-bottom: 4px; }
+
+      .author-meta .cref {
+        font-size: 11px;
+        color: var(--orange);
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .credentials {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .credential {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 0.88rem;
+        color: var(--gray-l);
+      }
+
+      .credential-icon {
+        width: 32px; height: 32px;
+        background: rgba(249,115,22,0.1);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-size: 1rem;
+      }
+
+      .results-strip {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        padding-top: 20px;
+        border-top: 1px solid var(--border);
+      }
+
+      .result-item {
+        text-align: center;
+        padding: 14px 10px;
+        background: var(--dark-4);
+        border-radius: var(--radius);
+        border: 1px solid var(--border);
+      }
+
+      .result-icon { font-size: 1.3rem; margin-bottom: 6px; }
+
+      .result-item p {
+        font-size: 0.75rem;
+        color: var(--gray-l);
+        line-height: 1.4;
+      }
+
+      /* ─── TESTIMONIALS ─── */
+      #testimonials {
+        background: var(--dark-2);
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .testimonials-placeholder {
+        display: grid;
+        gap: 16px;
+        margin-top: 32px;
+      }
+
+      .testimonial-card {
+        background: var(--dark-3);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 24px;
+      }
+
+      .stars { color: #FBBF24; font-size: 0.9rem; margin-bottom: 12px; }
+
+      .testimonial-card blockquote {
+        font-size: 0.95rem;
+        color: var(--text);
+        line-height: 1.7;
+        font-style: italic;
+        margin-bottom: 16px;
+      }
+
+      .testimonial-author {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .testimonial-avatar {
+        width: 36px; height: 36px;
+        border-radius: 50%;
+        background: var(--dark-4);
+        border: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.7rem;
+        font-weight: 700;
+        color: var(--gray-l);
+        flex-shrink: 0;
+      }
+
+      .testimonial-name { font-size: 0.85rem; font-weight: 600; color: var(--white); }
+      .testimonial-detail { font-size: 0.75rem; color: var(--gray); }
+
+      .coming-soon-note {
+        text-align: center;
+        color: var(--gray);
+        font-size: 0.85rem;
+        margin-top: 16px;
+        font-style: italic;
+      }
+
+      /* ─── PRICING ─── */
+      #pricing { background: var(--dark); }
+
+      .pricing-card {
+        background: var(--dark-3);
+        border: 1px solid rgba(249,115,22,0.25);
+        border-radius: var(--radius-lg);
+        padding: 40px 36px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 0 60px rgba(249,115,22,0.08);
+      }
+
+      .pricing-card::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, var(--orange), #C2410C);
+      }
+
+      .pricing-tag {
+        display: inline-block;
+        background: rgba(249,115,22,0.15);
+        border: 1px solid rgba(249,115,22,0.3);
+        border-radius: 100px;
+        padding: 6px 16px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--orange);
+        margin-bottom: 24px;
+      }
+
+      .price-display {
+        margin: 20px 0 8px;
+      }
+
+      .price-display .currency {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--gray-l);
+        vertical-align: top;
+        margin-top: 8px;
+        display: inline-block;
+      }
+
+      .price-display .amount {
+        font-size: 4rem;
+        font-weight: 900;
+        color: var(--white);
+        line-height: 1;
+        letter-spacing: -0.03em;
+      }
+
+      .price-display .cents {
+        font-size: 2rem;
+        font-weight: 900;
+        color: var(--white);
+        vertical-align: top;
+        margin-top: 8px;
+        display: inline-block;
+      }
+
+      .price-once {
+        font-size: 0.85rem;
+        color: var(--gray);
+        margin-bottom: 28px;
+      }
+
+      .price-includes {
+        list-style: none;
+        text-align: left;
+        margin: 24px 0 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .price-includes li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.9rem;
+        color: var(--text);
+      }
+
+      .price-includes li::before {
+        content: '';
+        width: 18px; height: 18px;
+        background: rgba(34,197,94,0.15);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%2322C55E'%3E%3Cpath fill-rule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clip-rule='evenodd'/%3E%3C/svg%3E");
+        background-size: 12px;
+        background-repeat: no-repeat;
+        background-position: center;
+        min-width: 18px;
+      }
+
+      .comparison {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-top: 28px;
+        text-align: left;
+      }
+
+      .comparison-item {
+        background: var(--dark-4);
+        border-radius: var(--radius);
+        padding: 14px;
+        border: 1px solid var(--border);
+      }
+
+      .comparison-item .comp-label {
+        font-size: 10px;
+        color: var(--gray);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 4px;
+      }
+
+      .comparison-item .comp-value {
+        font-size: 0.9rem;
+        color: var(--white);
+        font-weight: 600;
+      }
+
+      .comparison-item .comp-value.striked {
+        text-decoration: line-through;
+        color: var(--gray);
+      }
+
+      /* ─── FAQ ─── */
+      #faq {
+        background: var(--dark-2);
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .faq-list { margin-top: 32px; display: flex; flex-direction: column; gap: 2px; }
+
+      .faq-item {
+        background: var(--dark-3);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        overflow: hidden;
+        transition: border-color 0.2s;
+      }
+
+      .faq-item:hover { border-color: rgba(249,115,22,0.2); }
+
+      .faq-question {
+        width: 100%;
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 20px 22px;
+        text-align: left;
+        color: var(--white);
+        font-size: 0.95rem;
+        font-weight: 600;
+        font-family: inherit;
+      }
+
+      .faq-icon {
+        flex-shrink: 0;
+        width: 24px; height: 24px;
+        background: rgba(249,115,22,0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--orange);
+        font-size: 1.1rem;
+        font-weight: 400;
+        transition: transform 0.3s;
+        line-height: 1;
+      }
+
+      .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease, padding 0.35s;
+        padding: 0 22px;
+        color: var(--gray-l);
+        font-size: 0.92rem;
+        line-height: 1.75;
+      }
+
+      .faq-item.open .faq-answer {
+        max-height: 300px;
+        padding: 0 22px 20px;
+      }
+
+      /* ─── FINAL CTA ─── */
+      #final-cta {
+        background:
+          radial-gradient(ellipse 80% 60% at 50% 100%, rgba(249,115,22,0.15) 0%, transparent 65%),
+          var(--dark);
+        text-align: center;
+        padding: 96px 0;
+      }
+
+      #final-cta h2 { margin-bottom: 12px; }
+
+      #final-cta .sub {
+        font-size: 1rem;
+        color: var(--gray-l);
+        max-width: 520px;
+        margin: 0 auto 36px;
+        line-height: 1.7;
+      }
+
+      .cta-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .access-note {
+        font-size: 12px;
+        color: var(--gray);
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      /* ─── FOOTER ─── */
+      footer {
+        background: var(--dark-2);
+        border-top: 1px solid var(--border);
+        padding: 32px 0;
+        text-align: center;
+      }
+
+      .footer-logo {
+        font-size: 1rem;
+        font-weight: 800;
+        color: var(--white);
+        letter-spacing: -0.02em;
+        margin-bottom: 8px;
+      }
+
+      .footer-logo span { color: var(--orange); }
+
+      footer p {
+        font-size: 0.78rem;
+        color: var(--gray);
+        line-height: 1.7;
+        max-width: 480px;
+        margin: 0 auto;
+      }
+
+      /* ─── STICKY CTA BAR ─── */
+      .sticky-bar {
+        position: fixed;
+        bottom: 0; left: 0; right: 0;
+        background: rgba(10,10,10,0.95);
+        border-top: 1px solid var(--border);
+        backdrop-filter: blur(12px);
+        padding: 12px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        z-index: 100;
+        transform: translateY(100%);
+        transition: transform 0.4s ease;
+      }
+
+      .sticky-bar.visible { transform: translateY(0); }
+
+      .sticky-bar .sticky-text {
+        font-size: 0.85rem;
+        color: var(--gray-l);
+        line-height: 1.3;
+      }
+
+      .sticky-bar .sticky-text strong {
+        display: block;
+        color: var(--white);
+        font-size: 0.95rem;
+      }
+
+      .sticky-bar .btn-sm {
+        flex-shrink: 0;
+        background: var(--orange);
+        color: var(--white);
+        font-size: 0.8rem;
+        font-weight: 700;
+        padding: 12px 20px;
+        border-radius: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        white-space: nowrap;
+        box-shadow: 0 4px 16px rgba(249,115,22,0.3);
+        transition: all 0.2s;
+      }
+
+      .sticky-bar .btn-sm:hover {
+        background: var(--orange-d);
+        transform: translateY(-1px);
+      }
+
+      /* ─── RESPONSIVE ─── */
+      @media (min-width: 640px) {
+        .contents-grid { grid-template-columns: 1fr 1fr; }
+        .testimonials-placeholder { grid-template-columns: 1fr 1fr; }
+      }
+
+      @media (max-width: 480px) {
+        section { padding: 56px 0; }
+        .comparison { grid-template-columns: 1fr; }
+        .results-strip { grid-template-columns: 1fr; }
+        .pricing-card { padding: 28px 20px; }
+        .author-full { padding: 24px; }
+        .phases-track::before { left: 27px; }
+        .sticky-bar { flex-wrap: nowrap; }
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <!-- ═══════════════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════════════ -->
+    <section id="hero">
+      <div class="container">
+
+        <div class="hero-badge">
+          <span class="dot"></span>
+          Método de Personal Trainer Profissional
+        </div>
+
+        <h1>
+          Você já tentou correr.<br>
+          Parou. E ainda não entendeu<br>
+          <span class="orange">por quê.</span>
+        </h1>
+
+        <p class="subheadline">
+          O problema não foi o seu corpo.<br>
+          Foi a falta de método. E isso tem solução
+          <strong>em 8 semanas.</strong>
+        </p>
+
+        <div class="price-block">
+          <span class="price-from">de R$97,00</span>
+          <div class="price-main"><span>R$</span>39<span>,90</span></div>
+          <span class="price-note">Acesso vitalício &bull; Pagamento único</span>
+        </div>
+
+        <div class="cta-wrapper">
+          <a href="#pricing" class="btn">
+            Quero o Ebook Agora
+            <span class="btn-arrow">→</span>
+          </a>
+          <p class="guarantee-note">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            Acesso imediato após a compra
+          </p>
+        </div>
+
+        <div class="proof-strip">
+          <div class="proof-item">
+            <span class="proof-number">8</span>
+            <span class="proof-label">Semanas de<br>Treino Estruturado</span>
+          </div>
+          <div class="proof-item">
+            <span class="proof-number">24</span>
+            <span class="proof-label">Treinos<br>Completos</span>
+          </div>
+          <div class="proof-item">
+            <span class="proof-number">5km</span>
+            <span class="proof-label">Objetivo<br>Garantido</span>
+          </div>
+          <div class="proof-item">
+            <span class="proof-number">0</span>
+            <span class="proof-label">Risco de<br>Lesão</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════
+         SEÇÃO 1 — IDENTIFICAÇÃO
+    ═══════════════════════════════════════════════ -->
+    <section id="identification">
+      <div class="container">
+
+        <span class="label">Você se identifica?</span>
+        <h2>Você se reconhece em alguma<br>dessas situações?</h2>
+        <div class="divider left"></div>
+
+        <ul class="checklist">
+          <li>
+            <div class="check-icon">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <p>Saiu animado para correr e parou em menos de 10 minutos com o pulmão em chamas</p>
+          </li>
+          <li>
+            <div class="check-icon">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <p>Tentou mais de uma vez e sempre chegou ao mesmo resultado</p>
+          </li>
+          <li>
+            <div class="check-icon">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <p>Concluiu que "corrida não é para você" — mas no fundo ainda quer tentar</p>
+          </li>
+          <li>
+            <div class="check-icon">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <p>Usa app genérico ou vídeo do YouTube e não confia que está fazendo certo</p>
+          </li>
+          <li>
+            <div class="check-icon">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <p>Tem medo de se machucar e nem sabe se está correndo do jeito certo</p>
+          </li>
+        </ul>
+
+        <div class="highlight-box">
+          Se você marcou pelo menos uma, o <span class="orange">Destrave Sua Corrida</span> foi feito para você.
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════
+         SEÇÃO 2 — O PROBLEMA REAL
+    ═══════════════════════════════════════════════ -->
+    <section id="problem">
+      <div class="container">
+
+        <span class="label">O problema real</span>
+        <h2>A culpa não foi sua.<br>Foi do método que você <span class="orange">não teve.</span></h2>
+        <div class="divider left"></div>
+
+        <div class="problem-card">
+          <p>Sair correndo até não aguentar mais parece dedicação. Na prática, é o caminho mais curto para a lesão e para a desmotivação.</p>
+        </div>
+
+        <div class="problem-card">
+          <p>Velocidade errada. Sem progressão. Sem estrutura. O corpo queima, as pernas pesam e a conclusão que fica é: <strong style="color:var(--white)">"eu não tenho fôlego pra isso."</strong></p>
+        </div>
+
+        <div class="insight-box">
+          <p>
+            O pulmão queimando nos primeiros minutos não é sinal de que você está fora de forma.<br>
+            É sinal de que você <span class="orange">saiu rápido demais.</span><br><br>
+            Correr é uma habilidade. E como toda habilidade, ela se aprende com o método certo.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════
+         SEÇÃO 3 — A SOLUÇÃO
+    ═══════════════════════════════════════════════ -->
+    <section id="solution">
+      <div class="container">
+
+        <span class="label">A solução</span>
+        <h2>Conheça o<br><span class="orange">Destrave Sua Corrida</span></h2>
+        <div class="divider left"></div>
+
+        <p style="margin-bottom:20px;">
+          8 semanas de treino estruturado para te levar do zero aos 5km com segurança e sem risco de lesão.
+        </p>
+        <p>
+          Não é um plano genérico feito para qualquer pessoa. É um método com progressão real, semana a semana, que respeita o seu ritmo e te leva até o fim.
+        </p>
+
+        <div class="author-card">
+          <div class="author-avatar">CB</div>
+          <div class="author-info">
+            <h4>Criado por Conrado Berger</h4>
+            <p>Personal Trainer &bull; Maratonista &bull; Árbitro CBF</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════
+         SEÇÃO 4 — CONTEÚDO DO EBOOK
+    ═══════════════════════════════════════════════ -->
+    <section id="contents">
+      <div class="container">
+
+        <span class="label">O que está dentro</span>
+        <h2>Tudo que você precisa para<br>finalmente <span class="orange">sair do zero</span></h2>
+        <div class="divider left"></div>
+
+        <div class="contents-grid">
+          <div class="content-item">
+            <div class="content-num">01</div>
+            <p>Por que você nunca conseguiu correr e o que muda agora</p>
+          </div>
+          <div class="content-item">
+            <div class="content-num">02</div>
+            <p>Postura e respiração corretas para não se machucar desde o primeiro treino</p>
+          </div>
+          <div class="content-item">
+            <div class="content-num">03</div>
+            <p>Equipamento mínimo necessário para começar sem gastar errado</p>
+          </div>
+          <div class="content-item">
+            <div class="content-num">04</div>
+            <p>O método Run/Walk que alterna corrida e caminhada de forma intencional</p>
+          </div>
+          <div class="content-item">
+            <div class="content-num">05</div>
+            <p>8 semanas completas — 3 treinos por semana com duração e estrutura de cada sessão</p>
+          </div>
+          <div class="content-item">
+            <div class="content-num">06</div>
+            <p>A regra dos 10% que evita lesão e garante progressão real</p>
+          </div>
+          <div class="content-item">
+            <div class="content-num">07</div>
+            <p>Alimentação e hidratação para corredor iniciante, sem suplemento e sem complicação</p>
+          </div>
+          <div class="content-item">
+            <div class="content-num">08</div>
+            <p>O que fazer depois dos 5km para continuar evoluindo</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════
+         SEÇÃO 5 — AS 3 FASES
+    ═══════════════════════════════════════════════ -->
+    <section id="phases">
+      <div class="container">
+
+        <span class="label">O método em 3 fases</span>
+        <h2>Sua jornada do zero<br>aos <span class="orange">5km</span></h2>
+        <div class="divider left"></div>
+
+        <div class="phases-track">
+          <div class="phase-card">
+            <div class="phase-number">1</div>
+            <div class="phase-content">
+              <span class="phase-weeks">Semanas 1 e 2</span>
+              <h3>Fase 1 — Adaptação</h3>
+              <p>O corpo aprende o movimento. Treinos curtos, com caminhada estratégica. É o alicerce de tudo que vem depois. Você começa com 1 minuto de corrida alternado com 2 de caminhada.</p>
+            </div>
+          </div>
+          <div class="phase-card">
+            <div class="phase-number">2</div>
+            <div class="phase-content">
+              <span class="phase-weeks">Semanas 3 a 6</span>
+              <h3>Fase 2 — Construção</h3>
+              <p>O tempo de corrida aumenta progressivamente. Você começa a sentir que consegue mais do que imaginava. Na semana 6, você corre <strong style="color:var(--white)">20 minutos contínuos.</strong></p>
+            </div>
+          </div>
+          <div class="phase-card">
+            <div class="phase-number">3</div>
+            <div class="phase-content">
+              <span class="phase-weeks">Semanas 7 e 8</span>
+              <h3>Fase 3 — Consolidação</h3>
+              <p>Você já está correndo de forma quase contínua. O objetivo é chegar nos 5km com segurança e confiança. Sem lesão. Do zero à meta.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════
+         SEÇÃO 6 — SOBRE O AUTOR
+    ═══════════════════════════════════════════════ -->
+    <section id="author">
+      <div class="container">
+
+        <span class="label">Quem criou esse método</span>
+        <h2>Conrado Berger não<br>fala de teoria. <span class="orange">Ele corre.</span></h2>
+        <div class="divider left"></div>
+
+        <div class="author-full">
+          <div class="author-header">
+            <div class="author-avatar-lg">CB</div>
+            <div class="author-meta">
+              <h3>Conrado Berger</h3>
+              <p class="cref">CREF 025333-G/RS</p>
+              <p style="font-size:0.85rem;color:var(--gray-l);margin-top:6px;line-height:1.5;">
+                Personal trainer formado, maratonista e árbitro profissional de futebol
+              </p>
+            </div>
+          </div>
+
+          <div class="credentials">
+            <div class="credential">
+              <div class="credential-icon">🏃</div>
+              <span>Maratonista com várias provas completadas</span>
+            </div>
+            <div class="credential">
+              <div class="credential-icon">⚽</div>
+              <span>Árbitro profissional pela Federação Gaúcha e pela CBF</span>
+            </div>
+            <div class="credential">
+              <div class="credential-icon">💪</div>
+              <span>Personal trainer com alunos do sedentarismo absoluto à meia maratona</span>
+            </div>
+          </div>
+
+          <p style="font-size:0.92rem;color:var(--gray-l);line-height:1.75;border-top:1px solid var(--border);padding-top:20px;">
+            Tem alunos que saíram do sedentarismo absoluto e completaram meia maratona. Alunos que bateram recorde pessoal na maratona três vezes seguidas. Alunos que começaram querendo emagrecer e encontraram na corrida uma ferramenta contra a ansiedade e a depressão.
+          </p>
+
+          <div class="results-strip">
+            <div class="result-item">
+              <div class="result-icon">🏅</div>
+              <p>Do sedentarismo à meia maratona</p>
+            </div>
+            <div class="result-item">
+              <div class="result-icon">📈</div>
+              <p>3x recorde pessoal na maratona</p>
+            </div>
+            <div class="result-item">
+              <div class="result-icon">🧠</div>
+              <p>Corrida como ferramenta anti-ansiedade</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════
+         SEÇÃO 7 — DEPOIMENTOS
+    ═══════════════════════════════════════════════ -->
+    <section id="testimonials">
+      <div class="container">
+
+        <span class="label">Prova social</span>
+        <h2>Quem seguiu o método<br><span class="orange">chegou lá</span></h2>
+        <div class="divider left"></div>
+
+        <div class="testimonials-placeholder">
+          <!-- Depoimento placeholder 1 -->
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <blockquote>"Sempre achei que corrida não era para mim. Em 8 semanas provei para mim mesmo que estava errado. Método incrível, sem exageros e sem lesão."</blockquote>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">JM</div>
+              <div>
+                <p class="testimonial-name">João M.</p>
+                <p class="testimonial-detail">Completou os 5km na semana 8</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Depoimento placeholder 2 -->
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <blockquote>"Já tinha tentado correr duas vezes e desistido. Com o Destrave Sua Corrida finalmente entendi o erro: eu saía rápido demais. O método mudou tudo."</blockquote>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">CS</div>
+              <div>
+                <p class="testimonial-name">Carolina S.</p>
+                <p class="testimonial-detail">Do zero à primeira corrida de rua</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="coming-soon-note">* Mais depoimentos em breve. Seja um dos primeiros a completar o método.</p>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════
+         SEÇÃO 8 — PREÇO E CTA
+    ═══════════════════════════════════════════════ -->
+    <section id="pricing">
+      <div class="container">
+
+        <span class="label" style="display:block;text-align:center;">Inversão de risco</span>
+        <h2 style="text-align:center;">R$39,90.</h2>
+        <p style="text-align:center;color:var(--gray-l);margin-bottom:40px;max-width:520px;margin-left:auto;margin-right:auto;">
+          O preço de um jantar fora. De dois pares de meias esportivas. De um mês de streaming.<br>
+          Em troca: 8 semanas de treino estruturado com método comprovado.
+        </p>
+
+        <div class="pricing-card">
+          <span class="pricing-tag">Ebook — Acesso Vitalício</span>
+
+          <div class="price-display">
+            <span class="currency">R$</span>
+            <span class="amount">39</span>
+            <span class="cents">,90</span>
+          </div>
+          <p class="price-once">Pagamento único &bull; Seu para sempre</p>
+
+          <ul class="price-includes">
+            <li>8 semanas de treino completo (24 treinos)</li>
+            <li>Método Run/Walk com progressão real</li>
+            <li>Guia de postura, respiração e equipamento</li>
+            <li>A regra dos 10% para evitar lesão</li>
+            <li>Alimentação e hidratação para iniciantes</li>
+            <li>O que fazer após completar os 5km</li>
+            <li>Acesso imediato após o pagamento</li>
+          </ul>
+
+          <a href="#" class="btn" style="max-width:100%;">
+            Quero o Ebook Agora
+            <span class="btn-arrow">→</span>
+          </a>
+
+          <p class="guarantee-note" style="margin-top:16px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+            Pagamento seguro &bull; Acesso imediato no e-mail
+          </p>
+
+          <div class="comparison">
+            <div class="comparison-item">
+              <div class="comp-label">Personal presencial</div>
+              <div class="comp-value striked">R$300–500/mês</div>
+            </div>
+            <div class="comparison-item">
+              <div class="comp-label">Destrave Sua Corrida</div>
+              <div class="comp-value" style="color:var(--orange);">R$39,90 — uma vez</div>
+            </div>
+          </div>
+        </div>
+
+        <p style="text-align:center;color:var(--gray);font-size:0.88rem;margin-top:24px;line-height:1.7;">
+          A verdadeira pergunta não é se vale R$39,90.<br>
+          É <strong style="color:var(--white)">quanto tempo você ainda vai ficar parado</strong> esperando a hora certa que nunca chega.
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════
+         SEÇÃO 9 — FAQ
+    ═══════════════════════════════════════════════ -->
+    <section id="faq">
+      <div class="container">
+
+        <span class="label">Perguntas frequentes</span>
+        <h2>Tirei as principais<br><span class="orange">dúvidas para você</span></h2>
+        <div class="divider left"></div>
+
+        <div class="faq-list">
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Funciona para quem está começando do zero?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Sim. O método foi criado especificamente para iniciantes. Na primeira semana você começa com 1 minuto de corrida alternado com 2 minutos de caminhada. Não é exigido nenhum condicionamento prévio.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Preciso de equipamento especial?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Não. Você precisa de um tênis adequado para corrida e disposição para treinar. O ebook explica exatamente o que levar em conta na hora de escolher o tênis, sem precisar gastar uma fortuna.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Quanto tempo por semana preciso dedicar?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              3 treinos por semana, com duração entre 18 e 36 minutos dependendo da semana. Menos de 2 horas semanais no total. Dá para encaixar em qualquer rotina.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              E se uma semana for muito difícil?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              O método prevê isso. Você repete a semana antes de avançar. Chegar aos 5km em 9 ou 10 semanas é tão válido quanto em 8. O que importa é chegar, não a velocidade do processo.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              E se eu perder um treino?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Retome no próximo dia disponível e continue de onde parou. Um treino perdido não desfaz o progresso. Consistência ao longo das semanas é o que conta.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Como recebo o ebook após a compra?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              O acesso é imediato. Após a confirmação do pagamento, você recebe o link de download diretamente no e-mail cadastrado. Seu para sempre, sem mensalidade.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════
+         FINAL CTA
+    ═══════════════════════════════════════════════ -->
+    <section id="final-cta">
+      <div class="container">
+
+        <span class="label">Seu primeiro 5km começa aqui</span>
+        <h2>
+          8 semanas. Método real.<br>
+          <span class="orange">Do zero aos 5km.</span>
+        </h2>
+
+        <p class="sub">
+          Treino estruturado criado por um personal trainer e maratonista para te levar do zero aos 5km com método e segurança.
+          <br><strong>Por R$39,90. Uma vez. Seu para sempre.</strong>
+        </p>
+
+        <div class="cta-wrapper">
+          <a href="#pricing" class="btn">
+            Quero o Ebook Agora
+            <span class="btn-arrow">→</span>
+          </a>
+          <p class="access-note">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--green)">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            Acesso imediato após a compra
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════
+         FOOTER
+    ═══════════════════════════════════════════════ -->
+    <footer>
+      <div class="container">
+        <div class="footer-logo">CB <span>Running</span></div>
+        <p>
+          © 2026 CB Running — Conrado Berger. Todos os direitos reservados.<br>
+          CREF 025333-G/RS &bull; Personal Trainer &bull; Maratonista &bull; Árbitro CBF
+        </p>
+      </div>
+    </footer>
+
+
+    <!-- ═══════════════════════════════════════════════
+         STICKY BAR
+    ═══════════════════════════════════════════════ -->
+    <div class="sticky-bar" id="stickyBar">
+      <div class="sticky-text">
+        <strong>Destrave Sua Corrida</strong>
+        Do zero aos 5km em 8 semanas
+      </div>
+      <a href="#pricing" class="btn-sm">R$39,90 — Quero!</a>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════════════
+         JAVASCRIPT
+    ═══════════════════════════════════════════════ -->
+    <script>
+      // FAQ accordion
+      document.querySelectorAll('.faq-question').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const item = btn.closest('.faq-item');
+          const isOpen = item.classList.contains('open');
+
+          // close all
+          document.querySelectorAll('.faq-item').forEach(i => {
+            i.classList.remove('open');
+            i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+          });
+
+          // open clicked if it was closed
+          if (!isOpen) {
+            item.classList.add('open');
+            btn.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+
+      // Sticky bar: show after scrolling past hero
+      const stickyBar = document.getElementById('stickyBar');
+      const hero = document.getElementById('hero');
+
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          stickyBar.classList.toggle('visible', !entry.isIntersecting);
+        },
+        { threshold: 0 }
+      );
+
+      observer.observe(hero);
+    </script>
+
+  </body>
+</html>
