@@ -13,9 +13,9 @@
       *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
       :root {
-        --orange:   #F97316;
-        --orange-d: #EA6C0E;
-        --orange-l: #FED7AA;
+        --yellow:   #EAB308;
+        --yellow-d: #CA8A04;
+        --yellow-l: #FEF08A;
         --green:    #22C55E;
         --dark:     #0A0A0A;
         --dark-2:   #111111;
@@ -61,7 +61,7 @@
         font-weight: 700;
         letter-spacing: 0.12em;
         text-transform: uppercase;
-        color: var(--orange);
+        color: var(--yellow);
         margin-bottom: 16px;
       }
 
@@ -91,14 +91,14 @@
 
       p { color: var(--text); line-height: 1.75; }
 
-      .orange { color: var(--orange); }
+      .yellow { color: var(--yellow); }
       .white  { color: var(--white); }
 
       /* ─── DIVIDER ─── */
       .divider {
         width: 48px;
         height: 3px;
-        background: var(--orange);
+        background: var(--yellow);
         border-radius: 2px;
         margin: 20px auto;
       }
@@ -108,7 +108,7 @@
       #hero {
         padding: 80px 0 64px;
         background:
-          radial-gradient(ellipse 80% 60% at 50% -10%, rgba(249,115,22,0.18) 0%, transparent 65%),
+          radial-gradient(ellipse 80% 60% at 50% -10%, rgba(234,179,8,0.18) 0%, transparent 65%),
           var(--dark);
         text-align: center;
         position: relative;
@@ -127,20 +127,20 @@
         display: inline-flex;
         align-items: center;
         gap: 8px;
-        background: rgba(249,115,22,0.12);
-        border: 1px solid rgba(249,115,22,0.3);
+        background: rgba(234,179,8,0.12);
+        border: 1px solid rgba(234,179,8,0.3);
         border-radius: 100px;
         padding: 6px 16px;
         font-size: 12px;
         font-weight: 600;
-        color: var(--orange-l);
+        color: var(--yellow-l);
         letter-spacing: 0.05em;
         margin-bottom: 28px;
       }
 
       .hero-badge .dot {
         width: 6px; height: 6px;
-        background: var(--orange);
+        background: var(--yellow);
         border-radius: 50%;
         animation: pulse 2s ease-in-out infinite;
       }
@@ -168,8 +168,8 @@
         align-items: center;
         justify-content: center;
         gap: 10px;
-        background: var(--orange);
-        color: var(--white);
+        background: var(--yellow);
+        color: var(--dark);
         font-size: 1rem;
         font-weight: 800;
         letter-spacing: 0.03em;
@@ -182,7 +182,7 @@
         text-decoration: none;
         width: 100%;
         max-width: 440px;
-        box-shadow: 0 8px 32px rgba(249,115,22,0.35);
+        box-shadow: 0 8px 32px rgba(234,179,8,0.35);
         position: relative;
         overflow: hidden;
       }
@@ -191,14 +191,14 @@
         content: '';
         position: absolute;
         inset: 0;
-        background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, transparent 60%);
+        background: linear-gradient(135deg, rgba(255,255,255,0.18) 0%, transparent 60%);
         pointer-events: none;
       }
 
       .btn:hover {
-        background: var(--orange-d);
+        background: var(--yellow-d);
         transform: translateY(-2px);
-        box-shadow: 0 12px 40px rgba(249,115,22,0.45);
+        box-shadow: 0 12px 40px rgba(234,179,8,0.45);
       }
 
       .btn:active { transform: translateY(0); }
@@ -276,7 +276,7 @@
       .proof-number {
         font-size: 1.6rem;
         font-weight: 900;
-        color: var(--orange);
+        color: var(--yellow);
         line-height: 1;
       }
 
@@ -307,7 +307,7 @@
         transition: border-color 0.2s;
       }
 
-      .checklist li:hover { border-color: rgba(249,115,22,0.3); }
+      .checklist li:hover { border-color: rgba(234,179,8,0.3); }
 
       .check-icon {
         flex-shrink: 0;
@@ -326,8 +326,8 @@
 
       .highlight-box {
         margin-top: 32px;
-        background: linear-gradient(135deg, rgba(249,115,22,0.1), rgba(249,115,22,0.05));
-        border: 1px solid rgba(249,115,22,0.3);
+        background: linear-gradient(135deg, rgba(234,179,8,0.1), rgba(234,179,8,0.05));
+        border: 1px solid rgba(234,179,8,0.3);
         border-radius: var(--radius);
         padding: 20px 24px;
         text-align: center;
@@ -342,7 +342,7 @@
       .problem-card {
         background: var(--dark-3);
         border: 1px solid var(--border);
-        border-left: 3px solid var(--orange);
+        border-left: 3px solid var(--yellow);
         border-radius: var(--radius);
         padding: 24px;
         margin-bottom: 20px;
@@ -351,8 +351,8 @@
       .problem-card p { font-size: 1rem; line-height: 1.75; }
 
       .insight-box {
-        background: rgba(249,115,22,0.08);
-        border: 1px solid rgba(249,115,22,0.2);
+        background: rgba(234,179,8,0.08);
+        border: 1px solid rgba(234,179,8,0.2);
         border-radius: var(--radius);
         padding: 24px;
         text-align: center;
@@ -387,15 +387,14 @@
       .author-avatar {
         width: 56px; height: 56px;
         border-radius: 50%;
-        background: linear-gradient(135deg, var(--orange), #C2410C);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.5rem;
-        font-weight: 900;
-        color: var(--white);
+        overflow: hidden;
         flex-shrink: 0;
-        letter-spacing: -0.05em;
+        border: 2px solid rgba(234,179,8,0.4);
+      }
+
+      .author-avatar img {
+        width: 100%; height: 100%;
+        object-fit: cover;
       }
 
       .author-info h4 { font-size: 0.95rem; color: var(--white); margin-bottom: 2px; }
@@ -423,22 +422,22 @@
       }
 
       .content-item:hover {
-        border-color: rgba(249,115,22,0.25);
+        border-color: rgba(234,179,8,0.25);
         transform: translateX(4px);
       }
 
       .content-num {
         flex-shrink: 0;
         width: 28px; height: 28px;
-        background: rgba(249,115,22,0.15);
-        border: 1px solid rgba(249,115,22,0.3);
+        background: rgba(234,179,8,0.15);
+        border: 1px solid rgba(234,179,8,0.3);
         border-radius: 6px;
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: 0.7rem;
         font-weight: 800;
-        color: var(--orange);
+        color: var(--yellow);
         margin-top: 1px;
       }
 
@@ -470,7 +469,7 @@
         top: 40px;
         bottom: 40px;
         width: 2px;
-        background: linear-gradient(to bottom, var(--orange), rgba(249,115,22,0.1));
+        background: linear-gradient(to bottom, var(--yellow), rgba(234,179,8,0.1));
       }
 
       .phase-card {
@@ -485,13 +484,13 @@
         width: 56px; height: 56px;
         border-radius: 50%;
         background: var(--dark);
-        border: 2px solid var(--orange);
+        border: 2px solid var(--yellow);
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: 1.1rem;
         font-weight: 900;
-        color: var(--orange);
+        color: var(--yellow);
         z-index: 1;
       }
 
@@ -503,9 +502,9 @@
         font-weight: 700;
         letter-spacing: 0.1em;
         text-transform: uppercase;
-        color: var(--orange);
-        background: rgba(249,115,22,0.1);
-        border: 1px solid rgba(249,115,22,0.2);
+        color: var(--yellow);
+        background: rgba(234,179,8,0.1);
+        border: 1px solid rgba(234,179,8,0.2);
         border-radius: 100px;
         padding: 3px 10px;
         margin-bottom: 8px;
@@ -533,26 +532,26 @@
         gap: 20px;
       }
 
-      .author-avatar-lg {
-        width: 80px; height: 80px;
+      .author-photo-lg {
+        width: 88px; height: 88px;
         border-radius: 50%;
-        background: linear-gradient(135deg, var(--orange), #C2410C);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 2rem;
-        font-weight: 900;
-        color: var(--white);
+        overflow: hidden;
         flex-shrink: 0;
-        letter-spacing: -0.05em;
-        border: 3px solid rgba(249,115,22,0.3);
+        border: 3px solid rgba(234,179,8,0.4);
+        box-shadow: 0 0 0 6px rgba(234,179,8,0.08);
+      }
+
+      .author-photo-lg img {
+        width: 100%; height: 100%;
+        object-fit: cover;
+        object-position: top center;
       }
 
       .author-meta h3 { font-size: 1.3rem; margin-bottom: 4px; }
 
       .author-meta .cref {
         font-size: 11px;
-        color: var(--orange);
+        color: var(--yellow);
         font-weight: 700;
         letter-spacing: 0.08em;
         text-transform: uppercase;
@@ -574,13 +573,48 @@
 
       .credential-icon {
         width: 32px; height: 32px;
-        background: rgba(249,115,22,0.1);
+        background: rgba(234,179,8,0.1);
         border-radius: 8px;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-shrink: 0;
         font-size: 1rem;
+      }
+
+      /* ─── AUTHOR PHOTO GRID ─── */
+      .author-photo-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        border-top: 1px solid var(--border);
+        padding-top: 20px;
+      }
+
+      .author-photo-grid figure {
+        position: relative;
+        border-radius: var(--radius);
+        overflow: hidden;
+        aspect-ratio: 3/4;
+      }
+
+      .author-photo-grid figure img {
+        width: 100%; height: 100%;
+        object-fit: cover;
+        object-position: top center;
+        transition: transform 0.4s ease;
+      }
+
+      .author-photo-grid figure:hover img { transform: scale(1.03); }
+
+      .author-photo-grid figcaption {
+        position: absolute;
+        bottom: 0; left: 0; right: 0;
+        background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+        padding: 16px 12px 12px;
+        font-size: 0.75rem;
+        color: var(--gray-l);
+        line-height: 1.3;
       }
 
       .results-strip {
@@ -614,7 +648,7 @@
         border-bottom: 1px solid var(--border);
       }
 
-      .testimonials-placeholder {
+      .testimonials-grid {
         display: grid;
         gap: 16px;
         margin-top: 32px;
@@ -632,7 +666,7 @@
       .testimonial-card blockquote {
         font-size: 0.95rem;
         color: var(--text);
-        line-height: 1.7;
+        line-height: 1.75;
         font-style: italic;
         margin-bottom: 16px;
       }
@@ -641,6 +675,8 @@
         display: flex;
         align-items: center;
         gap: 10px;
+        padding-top: 14px;
+        border-top: 1px solid var(--border);
       }
 
       .testimonial-avatar {
@@ -660,12 +696,53 @@
       .testimonial-name { font-size: 0.85rem; font-weight: 600; color: var(--white); }
       .testimonial-detail { font-size: 0.75rem; color: var(--gray); }
 
-      .coming-soon-note {
-        text-align: center;
+      /* WhatsApp screenshot card */
+      .whatsapp-card {
+        background: var(--dark-3);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        overflow: hidden;
+      }
+
+      .whatsapp-header {
+        background: #1A1A2E;
+        padding: 10px 16px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .wa-dot {
+        width: 8px; height: 8px;
+        border-radius: 50%;
+        background: #25D366;
+        box-shadow: 0 0 6px rgba(37,211,102,0.5);
+      }
+
+      .wa-title {
+        font-size: 0.78rem;
+        color: var(--gray-l);
+        font-weight: 600;
+        letter-spacing: 0.04em;
+      }
+
+      .whatsapp-screenshot {
+        width: 100%;
+        display: block;
+        max-height: 420px;
+        object-fit: cover;
+        object-position: top;
+      }
+
+      .whatsapp-caption {
+        padding: 12px 16px;
+        font-size: 0.8rem;
         color: var(--gray);
-        font-size: 0.85rem;
-        margin-top: 16px;
-        font-style: italic;
+        border-top: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        gap: 6px;
       }
 
       /* ─── PRICING ─── */
@@ -673,13 +750,13 @@
 
       .pricing-card {
         background: var(--dark-3);
-        border: 1px solid rgba(249,115,22,0.25);
+        border: 1px solid rgba(234,179,8,0.25);
         border-radius: var(--radius-lg);
         padding: 40px 36px;
         text-align: center;
         position: relative;
         overflow: hidden;
-        box-shadow: 0 0 60px rgba(249,115,22,0.08);
+        box-shadow: 0 0 60px rgba(234,179,8,0.08);
       }
 
       .pricing-card::before {
@@ -687,26 +764,24 @@
         position: absolute;
         top: 0; left: 0; right: 0;
         height: 3px;
-        background: linear-gradient(90deg, var(--orange), #C2410C);
+        background: linear-gradient(90deg, var(--yellow), var(--yellow-d));
       }
 
       .pricing-tag {
         display: inline-block;
-        background: rgba(249,115,22,0.15);
-        border: 1px solid rgba(249,115,22,0.3);
+        background: rgba(234,179,8,0.15);
+        border: 1px solid rgba(234,179,8,0.3);
         border-radius: 100px;
         padding: 6px 16px;
         font-size: 11px;
         font-weight: 700;
         letter-spacing: 0.1em;
         text-transform: uppercase;
-        color: var(--orange);
+        color: var(--yellow);
         margin-bottom: 24px;
       }
 
-      .price-display {
-        margin: 20px 0 8px;
-      }
+      .price-display { margin: 20px 0 8px; }
 
       .price-display .currency {
         font-size: 1.5rem;
@@ -762,9 +837,6 @@
         width: 18px; height: 18px;
         background: rgba(34,197,94,0.15);
         border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         flex-shrink: 0;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%2322C55E'%3E%3Cpath fill-rule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clip-rule='evenodd'/%3E%3C/svg%3E");
         background-size: 12px;
@@ -824,7 +896,7 @@
         transition: border-color 0.2s;
       }
 
-      .faq-item:hover { border-color: rgba(249,115,22,0.2); }
+      .faq-item:hover { border-color: rgba(234,179,8,0.2); }
 
       .faq-question {
         width: 100%;
@@ -846,12 +918,12 @@
       .faq-icon {
         flex-shrink: 0;
         width: 24px; height: 24px;
-        background: rgba(249,115,22,0.1);
+        background: rgba(234,179,8,0.1);
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: var(--orange);
+        color: var(--yellow);
         font-size: 1.1rem;
         font-weight: 400;
         transition: transform 0.3s;
@@ -878,7 +950,7 @@
       /* ─── FINAL CTA ─── */
       #final-cta {
         background:
-          radial-gradient(ellipse 80% 60% at 50% 100%, rgba(249,115,22,0.15) 0%, transparent 65%),
+          radial-gradient(ellipse 80% 60% at 50% 100%, rgba(234,179,8,0.15) 0%, transparent 65%),
           var(--dark);
         text-align: center;
         padding: 96px 0;
@@ -925,7 +997,7 @@
         margin-bottom: 8px;
       }
 
-      .footer-logo span { color: var(--orange); }
+      .footer-logo span { color: var(--yellow); }
 
       footer p {
         font-size: 0.78rem;
@@ -968,28 +1040,28 @@
 
       .sticky-bar .btn-sm {
         flex-shrink: 0;
-        background: var(--orange);
-        color: var(--white);
+        background: var(--yellow);
+        color: var(--dark);
         font-size: 0.8rem;
-        font-weight: 700;
+        font-weight: 800;
         padding: 12px 20px;
         border-radius: 10px;
         text-transform: uppercase;
         letter-spacing: 0.04em;
         white-space: nowrap;
-        box-shadow: 0 4px 16px rgba(249,115,22,0.3);
+        box-shadow: 0 4px 16px rgba(234,179,8,0.3);
         transition: all 0.2s;
       }
 
       .sticky-bar .btn-sm:hover {
-        background: var(--orange-d);
+        background: var(--yellow-d);
         transform: translateY(-1px);
       }
 
       /* ─── RESPONSIVE ─── */
       @media (min-width: 640px) {
         .contents-grid { grid-template-columns: 1fr 1fr; }
-        .testimonials-placeholder { grid-template-columns: 1fr 1fr; }
+        .testimonials-grid { grid-template-columns: 1fr 1fr; }
       }
 
       @media (max-width: 480px) {
@@ -998,6 +1070,7 @@
         .results-strip { grid-template-columns: 1fr; }
         .pricing-card { padding: 28px 20px; }
         .author-full { padding: 24px; }
+        .author-photo-grid { grid-template-columns: 1fr 1fr; }
         .phases-track::before { left: 27px; }
         .sticky-bar { flex-wrap: nowrap; }
       }
@@ -1020,7 +1093,7 @@
         <h1>
           Você já tentou correr.<br>
           Parou. E ainda não entendeu<br>
-          <span class="orange">por quê.</span>
+          <span class="yellow">por quê.</span>
         </h1>
 
         <p class="subheadline">
@@ -1125,7 +1198,7 @@
         </ul>
 
         <div class="highlight-box">
-          Se você marcou pelo menos uma, o <span class="orange">Destrave Sua Corrida</span> foi feito para você.
+          Se você marcou pelo menos uma, o <span class="yellow">Destrave Sua Corrida</span> foi feito para você.
         </div>
 
       </div>
@@ -1139,7 +1212,7 @@
       <div class="container">
 
         <span class="label">O problema real</span>
-        <h2>A culpa não foi sua.<br>Foi do método que você <span class="orange">não teve.</span></h2>
+        <h2>A culpa não foi sua.<br>Foi do método que você <span class="yellow">não teve.</span></h2>
         <div class="divider left"></div>
 
         <div class="problem-card">
@@ -1153,7 +1226,7 @@
         <div class="insight-box">
           <p>
             O pulmão queimando nos primeiros minutos não é sinal de que você está fora de forma.<br>
-            É sinal de que você <span class="orange">saiu rápido demais.</span><br><br>
+            É sinal de que você <span class="yellow">saiu rápido demais.</span><br><br>
             Correr é uma habilidade. E como toda habilidade, ela se aprende com o método certo.
           </p>
         </div>
@@ -1169,7 +1242,7 @@
       <div class="container">
 
         <span class="label">A solução</span>
-        <h2>Conheça o<br><span class="orange">Destrave Sua Corrida</span></h2>
+        <h2>Conheça o<br><span class="yellow">Destrave Sua Corrida</span></h2>
         <div class="divider left"></div>
 
         <p style="margin-bottom:20px;">
@@ -1180,7 +1253,9 @@
         </p>
 
         <div class="author-card">
-          <div class="author-avatar">CB</div>
+          <div class="author-avatar">
+            <img src="img/conrado-perfil.jpg" alt="Conrado Berger — Personal Trainer" />
+          </div>
           <div class="author-info">
             <h4>Criado por Conrado Berger</h4>
             <p>Personal Trainer &bull; Maratonista &bull; Árbitro CBF</p>
@@ -1198,7 +1273,7 @@
       <div class="container">
 
         <span class="label">O que está dentro</span>
-        <h2>Tudo que você precisa para<br>finalmente <span class="orange">sair do zero</span></h2>
+        <h2>Tudo que você precisa para<br>finalmente <span class="yellow">sair do zero</span></h2>
         <div class="divider left"></div>
 
         <div class="contents-grid">
@@ -1247,7 +1322,7 @@
       <div class="container">
 
         <span class="label">O método em 3 fases</span>
-        <h2>Sua jornada do zero<br>aos <span class="orange">5km</span></h2>
+        <h2>Sua jornada do zero<br>aos <span class="yellow">5km</span></h2>
         <div class="divider left"></div>
 
         <div class="phases-track">
@@ -1288,12 +1363,14 @@
       <div class="container">
 
         <span class="label">Quem criou esse método</span>
-        <h2>Conrado Berger não<br>fala de teoria. <span class="orange">Ele corre.</span></h2>
+        <h2>Conrado Berger não<br>fala de teoria. <span class="yellow">Ele corre.</span></h2>
         <div class="divider left"></div>
 
         <div class="author-full">
           <div class="author-header">
-            <div class="author-avatar-lg">CB</div>
+            <div class="author-photo-lg">
+              <img src="img/conrado-perfil.jpg" alt="Conrado Berger — Personal Trainer" />
+            </div>
             <div class="author-meta">
               <h3>Conrado Berger</h3>
               <p class="cref">CREF 025333-G/RS</p>
@@ -1322,6 +1399,17 @@
             Tem alunos que saíram do sedentarismo absoluto e completaram meia maratona. Alunos que bateram recorde pessoal na maratona três vezes seguidas. Alunos que começaram querendo emagrecer e encontraram na corrida uma ferramenta contra a ansiedade e a depressão.
           </p>
 
+          <div class="author-photo-grid">
+            <figure>
+              <img src="img/conrado-perfil.jpg" alt="Conrado Berger — Personal Trainer" />
+              <figcaption>Personal Trainer &bull; CREF 025333</figcaption>
+            </figure>
+            <figure>
+              <img src="img/conrado-maratona.jpg" alt="Conrado Berger — Maratona Chicago 2020 — 3h15min" />
+              <figcaption>Chicago 2020 &bull; 42km em 3h15min</figcaption>
+            </figure>
+          </div>
+
           <div class="results-strip">
             <div class="result-item">
               <div class="result-icon">🏅</div>
@@ -1349,38 +1437,47 @@
       <div class="container">
 
         <span class="label">Prova social</span>
-        <h2>Quem seguiu o método<br><span class="orange">chegou lá</span></h2>
+        <h2>Quem seguiu o método<br><span class="yellow">chegou lá</span></h2>
         <div class="divider left"></div>
 
-        <div class="testimonials-placeholder">
-          <!-- Depoimento placeholder 1 -->
+        <div class="testimonials-grid">
+
+          <!-- Depoimento 1 — Aluno com 4 anos de acompanhamento -->
           <div class="testimonial-card">
             <div class="stars">★★★★★</div>
-            <blockquote>"Sempre achei que corrida não era para mim. Em 8 semanas provei para mim mesmo que estava errado. Método incrível, sem exageros e sem lesão."</blockquote>
+            <blockquote>
+              "Já sou aluno do Conrado há 4 anos ininterruptamente e, após ele compartilhar seu conhecimento e aplicar em meus treinamentos, tanto de corrida como de força, tive uma melhora significativa. Me fez evoluir demais, tanto que por 3 vezes batemos RP na Maratona e a última, com muitas subidas, algo desafiador. Também, através de sua orientação, juntos completamos o maior desafio — realizei o sonho de me tornar Ultramaratonista, completando a Travessia Torres-Tramandaí: percurso de 84km pela areia do litoral do RS."
+            </blockquote>
             <div class="testimonial-author">
-              <div class="testimonial-avatar">JM</div>
+              <div class="testimonial-avatar">A</div>
               <div>
-                <p class="testimonial-name">João M.</p>
-                <p class="testimonial-detail">Completou os 5km na semana 8</p>
+                <p class="testimonial-name">Aluno — 4 anos de acompanhamento</p>
+                <p class="testimonial-detail">Ultramaratonista &bull; 3x Recorde Pessoal na Maratona</p>
               </div>
             </div>
           </div>
 
-          <!-- Depoimento placeholder 2 -->
-          <div class="testimonial-card">
-            <div class="stars">★★★★★</div>
-            <blockquote>"Já tinha tentado correr duas vezes e desistido. Com o Destrave Sua Corrida finalmente entendi o erro: eu saía rápido demais. O método mudou tudo."</blockquote>
-            <div class="testimonial-author">
-              <div class="testimonial-avatar">CS</div>
-              <div>
-                <p class="testimonial-name">Carolina S.</p>
-                <p class="testimonial-detail">Do zero à primeira corrida de rua</p>
-              </div>
+          <!-- Depoimento 2 — WhatsApp screenshot -->
+          <div class="whatsapp-card">
+            <div class="whatsapp-header">
+              <span class="wa-dot"></span>
+              <span class="wa-title">Mensagem de aluno — WhatsApp</span>
+            </div>
+            <img
+              src="img/depoimento-chat.jpg"
+              alt="Depoimento de aluno via WhatsApp: notou evolução nos últimos 15 dias com treinos intervalados"
+              class="whatsapp-screenshot"
+            />
+            <div class="whatsapp-caption">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--green)">
+                <path d="M20.52 3.48A12 12 0 1 0 3.48 20.52 12 12 0 0 0 20.52 3.48z"/>
+                <path d="m9 12 2 2 4-4"/>
+              </svg>
+              Evolução em 15 dias de treino intervalado
             </div>
           </div>
+
         </div>
-
-        <p class="coming-soon-note">* Mais depoimentos em breve. Seja um dos primeiros a completar o método.</p>
 
       </div>
     </section>
@@ -1439,7 +1536,7 @@
             </div>
             <div class="comparison-item">
               <div class="comp-label">Destrave Sua Corrida</div>
-              <div class="comp-value" style="color:var(--orange);">R$39,90 — uma vez</div>
+              <div class="comp-value" style="color:var(--yellow);">R$39,90 — uma vez</div>
             </div>
           </div>
         </div>
@@ -1460,7 +1557,7 @@
       <div class="container">
 
         <span class="label">Perguntas frequentes</span>
-        <h2>Tirei as principais<br><span class="orange">dúvidas para você</span></h2>
+        <h2>Tirei as principais<br><span class="yellow">dúvidas para você</span></h2>
         <div class="divider left"></div>
 
         <div class="faq-list">
@@ -1539,7 +1636,7 @@
         <span class="label">Seu primeiro 5km começa aqui</span>
         <h2>
           8 semanas. Método real.<br>
-          <span class="orange">Do zero aos 5km.</span>
+          <span class="yellow">Do zero aos 5km.</span>
         </h2>
 
         <p class="sub">
@@ -1600,13 +1697,11 @@
           const item = btn.closest('.faq-item');
           const isOpen = item.classList.contains('open');
 
-          // close all
           document.querySelectorAll('.faq-item').forEach(i => {
             i.classList.remove('open');
             i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
           });
 
-          // open clicked if it was closed
           if (!isOpen) {
             item.classList.add('open');
             btn.setAttribute('aria-expanded', 'true');
@@ -1614,7 +1709,7 @@
         });
       });
 
-      // Sticky bar: show after scrolling past hero
+      // Sticky bar
       const stickyBar = document.getElementById('stickyBar');
       const hero = document.getElementById('hero');
 
